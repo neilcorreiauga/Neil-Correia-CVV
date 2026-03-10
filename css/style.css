@@ -38,6 +38,7 @@ header h1 {
   font-size: 2.5rem;
   color: white;
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ← ADDED for depth */
 }
 
 header img {
@@ -68,10 +69,21 @@ hr {
   width: 80%;
 }
 
+/* ADD THIS - h2 styling (was missing!) */
+section h2 {
+  font-family: "Roboto", sans-serif;
+  color: #0a2472; /* ← STRONGER dark navy */
+  border-bottom: 3px solid #0a2472;
+  padding-bottom: 0.5rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
 section h3 {
   font-family: "Roboto", sans-serif;
-  color: #2c3e50;
+  color: #1e3a8a; /* ← STRONGER rich blue */
   font-size: 1.5rem;
+  margin-top: 0;
 }
 
 section dl {
@@ -99,14 +111,51 @@ section ul li::before {
   font-size: 1.5rem;
 }
 
+/* UPDATED - Links with lighter background */
 section a {
-  color: #2980b9;
+  color: #0a2472; /* ← DARKER blue text */
+  background-color: #e6f0ff; /* ← LIGHTER blue background */
+  padding: 0.2rem 0.5rem; /* ← ADDED padding */
+  border-radius: 4px; /* ← ADDED rounded corners */
   text-decoration: none;
+  transition: all 0.3s ease; /* ← ADDED smooth hover */
+  display: inline-block; /* ← ADDED for better padding */
+  margin: 0.1rem 0; /* ← ADDED spacing */
 }
 
 section a:hover {
-  color: #e74c3c;
+  color: #0a2472; /* Keep dark text */
+  background-color: #cfe3ff; /* ← SLIGHTLY darker blue on hover */
   text-decoration: underline;
+}
+
+/* Nav links - keep original style but adjust for consistency */
+nav a {
+  color: white;
+  background-color: transparent;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+/* Footer links */
+footer a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
 }
 
 /**************   Projects   *****************/
